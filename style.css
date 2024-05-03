@@ -7,7 +7,12 @@
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: gray;
+  background-image: radial-gradient(
+    circle 1292px at -13.6% 51.7%,
+    rgba(0, 56, 68, 1) 0%,
+    rgba(163, 217, 185, 1) 51.5%,
+    rgba(255, 252, 247, 1) 88.6%
+  );
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,33 +22,23 @@
   flex-direction: column;
   padding: 1vw;
   height: 80vh;
+  /* border-radius: 2vw; */
   width: 35vw;
-  background-color: darkcyan;
+  /* background-color: rgba(9, 12, 13, 0.35); */
 }
 .li-textcontainer {
   display: flex;
 }
 
-.text-chat-2 {
-  flex-direction: column-reverse;
-  text-align: end;
-  height: 60vh;
-  width: 100%;
-  background-color: red;
-}
-
-p {
-  list-style: none;
-  background-color: green;
-  width: auto;
-  border: 2px solid black;
-  /* height: 3vh; */
-}
 .accept-prahu {
   text-align: start;
 }
 .text-chat-1 {
-  background-color: lightsalmon;
+  overflow-y: scroll;
+  background-image: url("https://img.freepik.com/premium-photo/siamese-beautiful-colorful-fish-art-sea-bottom-clear-images-generative-ai_880278-400.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 60vh;
   width: 100%;
 }
@@ -55,7 +50,6 @@ p {
   padding: 1vw;
   height: 80vh;
   width: 35vw;
-  background-color: darkgreen;
 }
 .user-info {
   padding: 1vw;
@@ -64,7 +58,11 @@ p {
   align-items: center;
   height: 4vw;
   width: 100%;
-  background-color: black;
+  background-color: rgba(9, 12, 13, 0.31);
+}
+
+.input-icon i {
+  margin-left: 1vw;
 }
 
 .image-con img {
@@ -88,6 +86,15 @@ p {
   border: 2px solid black;
 }
 
+#send-btn {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 3vw;
+}
+
 .icone-con i {
   border: none;
   margin-right: 2vw;
@@ -96,10 +103,34 @@ p {
 #input {
   font-size: 1.5vw;
   height: 3vw;
-  width: 25vw;
-  background-color: grey;
-  color: black;
+  width: 20vw;
+  background-color: black;
+  color: #fff;
   outline: none;
+  border: none;
+}
+
+.userDatasend {
+  text-align: end;
+}
+.userAccepat-data {
+  text-align: start;
+}
+#parshu-chat {
+  font-size: 1.5vw;
+  height: 3vw;
+  width: 18vw;
+  background-color: black;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+#parshu-chat::placeholder {
+  background-color: black;
+  font-size: 1.5vw;
+  outline: none;
+  border: none;
+  color: #fff;
 }
 
 #input::placeholder {
@@ -111,13 +142,58 @@ p {
 }
 
 .input-container {
+  /* margin-top: 1vw; */
   height: 3vw;
   width: 100%;
   color: #fff;
   font-size: 1.5vw;
-  border-radius: 3vw;
-  background-color: grey;
+  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  padding: 1vw;
+  background-color: black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+}
+
+p {
+  object-fit: cover;
+  list-style: none;
+  font-size: 2vw;
+  font-weight: 600;
+  width: auto;
+  color: #fff;
+  padding: 0.5vw;
+}
+.text-chat-2 {
+  overflow-y: scroll;
+  color: #000;
+  flex-direction: column-reverse;
+  text-align: start;
+  height: 60vh;
+  width: 100%;
+  background-image: url("./images/Screenshot\ 2024-05-03\ 150330.png");
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.input-icon i {
+  margin-left: 1vw;
+}
+
+@media (max-width: 800px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+  }
+  .chat-container-one {
+    width: 90vw;
+    height: 50vh;
+  }
+  .chat-container-two {
+    width: 90vw;
+    height: 50vh;
+  }
 }
